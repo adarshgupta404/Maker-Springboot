@@ -16,7 +16,7 @@ create database nsecdemo;
 
 ### Import the database tables from the folder `SQL`
 
-### Configure application.properties
+### Configure application.properties at `src/main/resources`
 ```bash
 spring.application.name=backend
 server.port=8000
