@@ -9,6 +9,7 @@ git clone https://github.com/adarshgupta404/Maker-Springboot.git
 cd Maker-Springboot
 ```
 ### Create database named `nsecdemo`
+```drop database nsecdemo;```
 
 ### Import the database tables from the folder `SQL`
 
