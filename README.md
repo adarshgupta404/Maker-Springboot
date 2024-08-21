@@ -15,6 +15,22 @@ cd Maker-Springboot
 
 ### Project will be running on `http://localhost:8000`
 
+
+### CURL : 
+```
+curl --location 'http://localhost:8000/api/supplier/query' \
+--header 'Content-Type: application/json' \
+--data '{
+    "location": "India",
+    "natureOfBusiness": "SMALL_SCALE",
+    "manufacturingProcess": "CASTING",
+    "sortBy": "companyName",
+    "sortDirection": "asc",
+    "page": 0,
+    "size": 10
+}'
+```
+
 ### POST API : `http://localhost:8000/api/supplier/query`
 
 ### API BODY :
