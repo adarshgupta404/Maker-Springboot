@@ -17,12 +17,15 @@ cd Maker-Springboot
 
 ### POST API : `http://localhost:8000/api/supplier/query`
 
-### API BODY : 
+### API BODY :
+
 ```
 {
     "location": "India",
     "natureOfBusiness": "SMALL_SCALE",
     "manufacturingProcess": "CASTING",
+    "sortBy": "companyName",
+    "sortDirection": "asc",
     "page": 0,
     "size": 10
 }
@@ -38,10 +41,13 @@ The `POST /api/supplier/query` endpoint allows users to query suppliers based on
 
 - `manufacturingProcess` (string, optional): The manufacturing process used by the supplier.
 
+- `sortBy` (string, optional): The sortBy will sort by CompanyName (default) or other column fields alphabetically.
+
+- `sortDirection` (string, optional): The sortDirection used for ordering in ascending or descending.
+
 - `page` (integer): The page number for paginated results.
 
 - `size` (integer): The size of the page for paginated results.
-
 
 ### Response
 
@@ -59,17 +65,17 @@ The response is a JSON object with the following properties:
 
 - `content` (array): An array of supplier objects, each containing:
 
-    - `supplierId` (integer): The ID of the supplier.
+  - `supplierId` (integer): The ID of the supplier.
 
-    - `companyName` (string): The name of the company.
+  - `companyName` (string): The name of the company.
 
-    - `website` (string): The website of the company.
+  - `website` (string): The website of the company.
 
-    - `location` (string): The location of the supplier.
+  - `location` (string): The location of the supplier.
 
-    - `natureOfBusiness` (string): The nature of business of the supplier.
+  - `natureOfBusiness` (string): The nature of business of the supplier.
 
-    - `manufacturingProcesses` (array): An array of manufacturing processes used by the supplier.
+  - `manufacturingProcesses` (array): An array of manufacturing processes used by the supplier.
 
 - `number` (integer): The page number.
 
@@ -79,22 +85,21 @@ The response is a JSON object with the following properties:
 
 - `pageable` (object): An object with properties:
 
-    - `pageNumber` (integer): The page number.
+  - `pageNumber` (integer): The page number.
 
-    - `pageSize` (integer): The page size.
+  - `pageSize` (integer): The page size.
 
-    - `sort` (object): An object with properties `empty`, `sorted`, and `unsorted`.
+  - `sort` (object): An object with properties `empty`, `sorted`, and `unsorted`.
 
-    - `offset` (integer): The offset.
+  - `offset` (integer): The offset.
 
-    - `unpaged` (boolean): Indicates if it's unpaged.
+  - `unpaged` (boolean): Indicates if it's unpaged.
 
-    - `paged` (boolean): Indicates if it's paged.
+  - `paged` (boolean): Indicates if it's paged.
 
 - `empty` (boolean): Indicates if the content is empty.
 
-
-``` json
+```json
 {
   "type": "object",
   "properties": {
@@ -151,5 +156,4 @@ The response is a JSON object with the following properties:
     "empty": { "type": "boolean" }
   }
 }
-
-````
+```
