@@ -25,7 +25,7 @@ create database nsecdemo;
 curl --location 'http://localhost:8000/api/supplier/query' \
 --header 'Content-Type: application/json' \
 --data '{
-    "location": "India",
+    "location": "Mumbai",
     "natureOfBusiness": "SMALL_SCALE",
     "manufacturingProcess": "CASTING",
     "sortBy": "companyName",
@@ -41,7 +41,7 @@ curl --location 'http://localhost:8000/api/supplier/query' \
 
 ```bash
 {
-    "location": "India",
+    "location": "Mumbai",
     "natureOfBusiness": "SMALL_SCALE",
     "manufacturingProcess": "CASTING",
     "sortBy": "companyName",
