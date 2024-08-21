@@ -9,7 +9,9 @@ git clone https://github.com/adarshgupta404/Maker-Springboot.git
 cd Maker-Springboot
 ```
 ### Create database named `nsecdemo`
-```drop database nsecdemo;```
+```bash 
+drop database nsecdemo;
+```
 
 ### Import the database tables from the folder `SQL`
 
@@ -19,7 +21,7 @@ cd Maker-Springboot
 
 
 ### CURL : 
-```
+```bash
 curl --location 'http://localhost:8000/api/supplier/query' \
 --header 'Content-Type: application/json' \
 --data '{
@@ -37,7 +39,7 @@ curl --location 'http://localhost:8000/api/supplier/query' \
 
 ### API BODY :
 
-```
+```bash
 {
     "location": "India",
     "natureOfBusiness": "SMALL_SCALE",
