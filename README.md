@@ -8,8 +8,9 @@ Clone the repository using Git:
 git clone https://github.com/adarshgupta404/Maker-Springboot.git
 cd Maker-Springboot
 ```
+### Create database named `nsecdemo`
 
-### Import the database from the folder `SQL`
+### Import the database tables from the folder `SQL`
 
 ### Run the project project
 
