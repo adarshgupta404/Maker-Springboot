@@ -17,17 +17,16 @@ cd Maker-Springboot
 
 ### POST API : `http://localhost:8000/api/supplier/query`
 
-### API BODY : ```{
-
+### API BODY : 
+```
+{
     "location": "India",
     "natureOfBusiness": "SMALL_SCALE",
     "manufacturingProcess": "CASTING",
     "page": 0,
     "size": 10
-
 }
-
-````
+```
 
 The `POST /api/supplier/query` endpoint allows users to query suppliers based on various parameters.
 
