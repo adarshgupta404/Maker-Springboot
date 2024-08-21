@@ -8,12 +8,33 @@ Clone the repository using Git:
 git clone https://github.com/adarshgupta404/Maker-Springboot.git
 cd Maker-Springboot
 ```
+
 ### Create database named `nsecdemo`
 ```bash 
 create database nsecdemo;
 ```
 
 ### Import the database tables from the folder `SQL`
+
+### Configure application.properties
+```bash
+spring.application.name=backend
+server.port=8000
+
+#db specific properties
+spring.datasource.url=jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:nsecdemo}
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.username=${DB_USERNAME:rootuser}
+spring.datasource.password=${DB_PASSWORD:root}
+
+
+#ORM s/w specific properties
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+
+# spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+```
+
 
 ### Run the project project
 
