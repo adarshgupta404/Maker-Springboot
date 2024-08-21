@@ -10,7 +10,7 @@ cd Maker-Springboot
 ```
 ### Create database named `nsecdemo`
 ```bash 
-drop database nsecdemo;
+create database nsecdemo;
 ```
 
 ### Import the database tables from the folder `SQL`
